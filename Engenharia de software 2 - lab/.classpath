@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Aula_1_2_TDD_Codigo_Exercicio/TDD/src"/>
+	<classpathentry kind="src" path="teste-de-unidade/src"/>
+	<classpathentry kind="src" path="teste-de-unidade/test"/>
+	<classpathentry kind="output" path="Aula_1_2_TDD_Codigo_Exercicio/bin"/>
+</classpath>

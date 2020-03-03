@@ -2,6 +2,9 @@ package br.com.value.projects.service;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.Console;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -53,6 +56,34 @@ public class JogoTeste {
 
 		assertEquals(1, jogo.getResultados().size());
         assertEquals(500, jogo.getResultados().get(0).getMetrica(), 0.00001);
-		}
+	}
+	
+	//Gabriel Yudi
+	@Test
+	public void verificarSeTodosOsParticipantesDoJogoPossuemResultados() {
+		
+		Jogo jogo = new Jogo("Tiro ao alvo");
+		Participante leonardo = new Participante("Leonardo");
+		Participante joao = new Participante("Joao");
+		Participante rafaela = new Participante("Rafaela");
+		Participante maria = new Participante("Maria");
+		
+		jogo.anota(new Resultado(leonardo, 100));
+		jogo.anota(new Resultado(joao, 300));
+		jogo.anota(new Resultado(rafaela, 150));
+		jogo.anota(new Resultado(maria, 200));
+		
+		List<Resultado> lista = jogo.getResultados() ;
+				
+		assertEquals(lista.get(0).getParticipante(),leonardo);
+		assertEquals(lista.get(1).getParticipante(),joao);
+		assertEquals(lista.get(2).getParticipante(),rafaela);
+		assertEquals(lista.get(3).getParticipante(),maria);
+
+		
+		
+		
+		
+	}
 
 }

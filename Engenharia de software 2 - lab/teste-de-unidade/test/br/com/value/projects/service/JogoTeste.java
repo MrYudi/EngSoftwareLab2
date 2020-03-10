@@ -1,6 +1,8 @@
 package br.com.value.projects.service;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.Console;
 import java.util.ArrayList;
@@ -47,7 +49,7 @@ public class JogoTeste {
 	@Test
 	public void naoDeveAceitarDoisResultadosDoMesmoParticipante(){
 
-		Jogo jogo = new Jogo("Caça peças");
+		Jogo jogo = new Jogo("Caï¿½a peï¿½as");
 		Participante leonardo = new Participante("Leonardo");
 
 		jogo.anota(new Resultado(leonardo, 500.0));
@@ -81,9 +83,23 @@ public class JogoTeste {
 		assertEquals(lista.get(3).getParticipante(),maria);
 
 		
+	}
+	
+	//Lucas Chaves
+	@Test(expected=RuntimeException.class)
+	public void validarSeAceitaResultadosNegativos() {
 		
+		Jogo jogo = new Jogo("Tiro ao alvo");
+		Participante leonardo = new Participante("Leonardo");
+		Participante joao = new Participante("Joao");
+		Participante rafaela = new Participante("Rafaela");
+		Participante maria = new Participante("Maria");
 		
-		
+		jogo.anota(new Resultado(leonardo, -100));
+		jogo.anota(new Resultado(joao, -300));
+		jogo.anota(new Resultado(rafaela, -150));
+		jogo.anota(new Resultado(maria, -5));
+				
 	}
 
 }

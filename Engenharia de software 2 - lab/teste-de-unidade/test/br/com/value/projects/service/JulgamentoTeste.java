@@ -53,7 +53,7 @@ public class JulgamentoTeste {
 	@Test(expected=RuntimeException.class)
 	public void naoDeveJulgarSemResultado() {
 	    Jogo jogo = new CriadorDeJogo()
-	        .para("Caça peças")
+	        .para("Caï¿½a peï¿½as")
 	        .constroi();
 
 	    juiz.julga(jogo);

@@ -116,5 +116,33 @@ public class JogoTeste {
 			assertEquals(true, false);
 		}
 	}
+	
+	//Luiz Quintel
+	@Test
+	public void validarNomesParticipantes() {
+
+	Participante leonardo = new Participante("Leonardo");
+	Participante joao = new Participante("Joao");
+	Participante rafaela = new Participante("Rafaela");
+	Participante maria = new Participante("Maria");
+
+	if(!leonardo.getNome().matches("[A-Za-z]*")){
+		assertEquals(true, false);
+	}
+
+	if(!joao.getNome().matches("[A-Za-z]*")){
+		assertEquals(true, false);
+	}
+
+	if(!rafaela.getNome().matches("[A-Za-z]*")){
+		assertEquals(true, false);
+	}
+
+	if(!maria.getNome().matches("[A-Za-z]*")){
+		assertEquals(true, false);
+	}
+
+	}
+	
 
 }

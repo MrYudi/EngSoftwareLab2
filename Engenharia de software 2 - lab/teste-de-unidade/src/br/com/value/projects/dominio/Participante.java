@@ -12,6 +12,10 @@ public class Participante {
 	public Participante(int id, String nome) {
 		this.id = id;
 		this.nome = nome;
+		
+		if(!this.nome.matches("[A-Za-z]*")){
+			throw new RuntimeException("Não pode usar caractere especial");
+		}
 	}
 
 	public int getId() {

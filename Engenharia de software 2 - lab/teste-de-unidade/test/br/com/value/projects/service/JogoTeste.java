@@ -101,5 +101,20 @@ public class JogoTeste {
 		jogo.anota(new Resultado(maria, -5));
 				
 	}
+	
+	//Laura Padilla
+	@Test
+	public void validarValorMaximoParaMetrica() {
+		
+		Jogo jogo = new Jogo("Tiro ao alvo");
+		Participante leonardo = new Participante("Leonardo");
+		
+		jogo.anota(new Resultado(leonardo, 900));
+				
+		if(jogo.getResultados().get(0).getMetrica() > 1000) 
+		{
+			assertEquals(true, false);
+		}
+	}
 
 }

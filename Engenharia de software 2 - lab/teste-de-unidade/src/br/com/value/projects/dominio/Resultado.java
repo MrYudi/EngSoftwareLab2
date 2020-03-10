@@ -24,6 +24,17 @@ public class Resultado {
 		return metrica;
 	}
 	
+	public void validaResultadoMaximoMetrica(double metrica) {
+		try {
+			if(metrica > 1000)
+			{
+				throw new Exception("Métrica maior que o valor máximo");
+			}
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
 	
 	
 }

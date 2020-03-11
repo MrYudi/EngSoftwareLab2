@@ -144,5 +144,14 @@ public class JogoTeste {
 
 	}
 	
+	
+	//Joao
+	@Test
+	public void verificarSeDescricaoDoJogoEstaVazia(){
+		Jogo jogo = new Jogo("");
+		Participante joao = new Participante("João");
+		
+		assertEquals(true, jogo.getDescricao().isEmpty());
+	}
 
 }
